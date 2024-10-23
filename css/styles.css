@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ /* Custom styles */
+ header.bg-custom-blue {
+    background-color: #133E62;
+}
+.bg-custom-cyan {
+    background-color: #39565c;
+}
+.text-custom-gray {
+    color: #f7fafc; /* Light gray for better contrast on the navy background */
+}
+.hover\:bg-custom-cyan:hover {
+    background-color: #307677;
+}
+
+.text-4xl {
+    color:#133E62;
+}
+
+.border-indigo-600 {
+    background-color: #133E62;
+}
+
+.inline-block {
+    border-color: #133E62;
+}

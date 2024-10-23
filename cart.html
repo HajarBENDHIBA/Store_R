@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cart page for Rütrafe Joailliers">
+  <title>Rütrafe Store </title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link href="css/tailwind.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+  <!-- Navbar -->
+  <header class="bg-custom-blue shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <a href="index.html" class="text-2xl font-bold text-white">Rütrafe Joailliers</a>
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+        <nav id="nav-menu" class="hidden lg:flex space-x-4">
+            <a href="index.html" class="text-white hover:text-custom-cyan">Home</a>
+            <a href="product.html" class="text-white hover:text-custom-cyan">Products</a>
+            <a href="cart.html" class="text-white hover:text-custom-cyan relative">
+                Cart
+                <span id="cart-count" class="absolute top-0 right-0 bg-red-600 text-white rounded-full px-1 text-xs"></span>
+            </a>
+            <a href="contact.html" class="text-white hover:text-custom-cyan">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden lg:hidden">
+    <nav class="bg-custom-blue p-4">
+        <a href="index.html" class="block text-white py-2 hover:text-custom-cyan">Home</a>
+        <a href="product.html" class="block text-white py-2 hover:text-custom-cyan">Products</a>
+        <a href="cart.html" class="block text-white py-2 hover:text-custom-cyan relative">
+            Cart
+            <span id="cart-count" class="absolute top-0 right-0 bg-red-600 text-white rounded-full px-1 text-xs"></span>
+        </a>
+        <a href="contact.html" class="block text-white py-2 hover:text-custom-cyan">Contact</a>
+    </nav>
+</div>
+
+  <!-- Cart Section -->
+  <main class="flex-grow container mx-auto py-12 flex flex-col items-center">
+    <h1 class="text-4xl font-bold mb-6 text-custom-blue text-center">Your Cart</h1>
+
+    <!-- Empty Cart Message -->
+    <div id="empty-cart" class="hidden text-center">
+        <img src="images/cartempty.png" alt="Empty Cart" class="mx-auto mb-4 h-54 md:h-54"> 
+    </div>
+  
+    <div class="relative w-full max-w-4xl border border-gray-300 bg-white rounded-lg shadow-lg p-6">
+  
+      <div class="mt-4 space-y-6" id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+  
+      <div class="flex justify-between items-center mt-8 p-4 border-t border-gray-200">
+        <div id="total" class="font-bold text-2xl text-gray-700"></div>
+        <button id="checkout-button" class="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-500 transition duration-300 ease-in-out focus:outline-none" disabled>Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-custom-white text-black py-8 text-center">
+    <p>&copy; 2024 Rütrafe Joailliers. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
